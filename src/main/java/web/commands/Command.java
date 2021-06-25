@@ -29,6 +29,7 @@ public abstract class Command
         commands.put("studentpage", new CommandProtectedPage("customerpage", "student"));
         commands.put("adminpage", new CommandProtectedPage("employeepage", "admin"));
         commands.put("showstudents", new ShowStudentsCommand("showstudentpage", "admin"));
+        commands.put("addnewstudentpage", new AddNewStudentCommand("addnewstudentpage", "admin"));
     }
 
     public static Command fromPath(
@@ -53,3 +54,21 @@ public abstract class Command
             throws UserException;
 
 }
+
+/*
+<form action="${pageContext.request.contextPath}/fc/addnewstudentpage" method="post">
+<div class="container mt-2">
+
+<label class="mt-2">Email</label>
+<input type="text" name="email" class="form-control mt-2">
+
+<label class="mt-2">Kodeord</label>
+<input type="text" name="password" class="form-control mt-2">
+
+
+<a href="employeepage" type="button" class="mt-3 btn btn-danger float-left">Gå tilbage</a>
+
+<button type="submit" class="mt-3 btn btn-success float-end">Tilføj</button>
+</div>
+</form>
+*/

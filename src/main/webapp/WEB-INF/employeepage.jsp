@@ -13,6 +13,12 @@
         You are now logged in as a Admin of our wonderful site.
 
         <a href="${pageContext.request.contextPath}/fc/showstudents">Vis alle studerende</a>
+        hej
+
+        <div class="d-flex justify-content-center mt-5">
+            <br>
+            <a href="${pageContext.request.contextPath}/fc/addnewstudentpage" type="button" class="btn btn-primary btn-lg ms-5">tilføj ny elev</a>
+        </div>
 
     </jsp:body>
 </t:genericpage>
