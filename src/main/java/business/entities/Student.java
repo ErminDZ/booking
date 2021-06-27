@@ -1,19 +1,29 @@
 package business.entities;
 
-public class AddStudent
+public class Student
 {
     private String email;
     private String password;
     private String role;
     private int phone;
+    private int points;
 
 
-    public AddStudent(String email, String password, String role, int phone) {
+
+    public Student(String email, String password, String role, int phone, int points) {
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.role = role;
+        this.points = points;
+    }
 
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
     }
 
     public String getEmail() {

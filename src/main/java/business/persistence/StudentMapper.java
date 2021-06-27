@@ -1,6 +1,6 @@
 package business.persistence;
 
-import business.entities.AddStudent;
+import business.entities.Student;
 import business.entities.User;
 import business.exceptions.UserException;
 
@@ -51,7 +51,7 @@ public class StudentMapper
         return studentList;
     }
 
-    public AddStudent addNewStudent(AddStudent student) throws UserException {
+    public Student addNewStudent(Student student) throws UserException {
 
         try (Connection connection = database.connect()) {
             String sql = "INSERT INTO user SET email = ?, password = ?, role = ?, phone = ?";

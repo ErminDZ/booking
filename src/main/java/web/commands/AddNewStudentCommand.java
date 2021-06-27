@@ -1,12 +1,11 @@
 package web.commands;
 
-import business.entities.AddStudent;
+import business.entities.Student;
 import business.exceptions.UserException;
 import business.services.AddNewStudentFacade;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 public class AddNewStudentCommand extends CommandProtectedPage {
     AddNewStudentFacade addNewStudentFacade = new AddNewStudentFacade(database);
@@ -26,8 +25,9 @@ public class AddNewStudentCommand extends CommandProtectedPage {
             String password = request.getParameter("password");
             int phone = Integer.parseInt(request.getParameter("phone"));
             String role = request.getParameter("role");
-            AddStudent addStudent = addNewStudentFacade.addStudent(email, password, role, phone);
-            request.setAttribute("addStudent", addStudent);
+            int points = Integer.parseInt(request.getParameter("points"));
+            Student student = addNewStudentFacade.addStudent(email, password, role, phone, points);
+            request.setAttribute("addStudent", student);
         }
         return pageToShow;
     }

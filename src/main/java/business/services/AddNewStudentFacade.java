@@ -1,6 +1,6 @@
 package business.services;
 
-import business.entities.AddStudent;
+import business.entities.Student;
 import business.exceptions.UserException;
 import business.persistence.Database;
 import business.persistence.StudentMapper;
@@ -12,9 +12,9 @@ public class AddNewStudentFacade
 
     public AddNewStudentFacade(Database database){ this.studentMapper = new StudentMapper(database);}
 
-    public AddStudent addStudent(String email, String password, String role, int phone) throws UserException
+    public Student addStudent(String email, String password, String role, int phone,int points) throws UserException
     {
-        AddStudent student = new AddStudent(email, password, role, phone);
+        Student student = new Student(email, password, role, phone, points);
         student = studentMapper.addNewStudent(student);
         return student;
     }
