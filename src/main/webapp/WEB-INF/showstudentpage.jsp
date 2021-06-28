@@ -13,13 +13,23 @@
         <h1>Hello ${sessionScope.email} </h1>
        Her er en liste med alle studerende
         <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Navn</th>
+                <th scope="col">Point</th>
+            </tr>
+            </thead>
+            <tbody>
             <c:forEach var="student" items="${requestScope.studentlist}">
                 <tr>
                     <td>${student.id}</td>
                     <td>${student.email}</td>
+                    <td>${student.points}</td>
                 </tr>
 
             </c:forEach>
+            </tbody>
         </table>
     </jsp:body>
 

@@ -11,7 +11,7 @@
 
     <jsp:body>
 
-        <form action="${pageContext.request.contextPath}/fc/" method="post">
+        <form action="${pageContext.request.contextPath}/fc/confirmbookingpage" method="post">
 
         <table class="table table-striped">
         <thead>
@@ -33,9 +33,13 @@
                     <td>${item.type}</td>
                     <td>${item.description}</td>
                     <td>${item.roomnumber}</td>
-                    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                        </label></td>
+                    <td> <select class="form-select mt-4" name="days">
+                        <option>Antal dage</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select></td>
+                    <td><button type="submit" class="mt-3 btn btn-success align-items-center">Book</button></td>
                 </tr>
             </div>
         </div>
@@ -43,17 +47,13 @@
         </tbody>
         </table>
 
-        <select class="form-select mt-4" name="days">
-            <option>Antal dage</option>
-            <option text="1">1 dag</option>
-            <option text="3">3 dag</option>
-            <option text="7">1 uge</option>
-            <option text="14">2 uger</option>
-        </select>
+        </form>
 
-        <button type="submit" class="mt-3 btn btn-success float-end">Bekræft</button>
-        <br>
 
     </jsp:body>
 
 </t:genericpage>
+<!---
+<td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+    </label></td>

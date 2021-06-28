@@ -33,15 +33,21 @@
         <c:if test="${addHomeLink == null }">
             <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Home</a>
         </c:if>
+        <!---
         <a class="p-2 text-dark" href="#">Orders</a>
         <a class="p-2 text-dark" href="#">Profile</a>
         <a class="p-2 text-dark" href="#">About</a>
+        --->
     </nav>
 
     <div>
 
         <c:if test="${sessionScope.user != null }">
             ${sessionScope.user.email}
+        </c:if>
+
+        <c:if test="${sessionScope.user != null }">
+        :    ${sessionScope.user.points}
         </c:if>
 
         <c:set var="thisPage" value="${pageContext.request.servletPath}"/>

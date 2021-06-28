@@ -14,12 +14,32 @@ public class User
         this.email = email;
         this.password = password;
         this.role = role;
+
+    }
+
+    public User(String email, String password, String role, int points)
+    {
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.points = points;
     }
 
     private int id; // just used to demo retrieval of autogen keys in UserMapper
     private String email;
     private String password; // Should be hashed and secured
     private String role;
+    private int points;
+
+
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
 
     public String getEmail()
     {

@@ -33,7 +33,8 @@ public class StudentMapper
                     int id = rs.getInt("user_id");
                     String email = rs.getString("email");
                     String password = rs.getString("password");
-                    User user = new User(email, password, role);
+                    int points = rs.getInt("points");
+                    User user = new User(email, password, role, points);
                     user.setId(id);
                     studentList.add(user);
                 }

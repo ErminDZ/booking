@@ -1,24 +1,24 @@
 package business.entities;
 
+import java.util.Date;
+
 public class Booking
 {
     private int booking_id;
     private int user_id;
     private String booking_date;
-    private String booking_status;
+    private boolean booking_status;
     private int item_id;
     private int days;
     private String comment;
 
-    public Booking(int booking_id, int user_id, String booking_date, String booking_status, int item_id, int days, String comment) {
-        this.booking_id = booking_id;
-        this.user_id = user_id;
+    public Booking(String booking_date,boolean booking_status, int days)
+    {
         this.booking_date = booking_date;
-        this.booking_status = booking_status;
-        this.item_id = item_id;
         this.days = days;
-        this.comment = comment;
+        this.booking_status = booking_status;
     }
+
 
     public int getBooking_id() {
         return booking_id;
@@ -44,14 +44,6 @@ public class Booking
         this.booking_date = booking_date;
     }
 
-    public String getBooking_status() {
-        return booking_status;
-    }
-
-    public void setBooking_status(String booking_status) {
-        this.booking_status = booking_status;
-    }
-
     public int getItem_id() {
         return item_id;
     }
@@ -74,5 +66,13 @@ public class Booking
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public boolean setBooking_status() {
+        return false;
+    }
+
+    public boolean isBooking_status() {
+        return booking_status;
     }
 }

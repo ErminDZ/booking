@@ -11,19 +11,13 @@
 
     <jsp:body>
 
-        <h5>...</h5>
+        <h5>dage:</h5>
         <p>
-                ${requestScope}
+                ${requestScope.bookings.days}
         </p>
-
-        <h5>...</h5>
+        <h5>dato:</h5>
         <p>
-                ${requestScope}
-        </p>
-
-        <h5>...</h5>
-        <p>
-                ${requestScope}
+                ${requestScope.bookings.booking_date}
         </p>
 
     </jsp:body>
