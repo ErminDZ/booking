@@ -6,13 +6,13 @@ public class Booking
 {
     private int booking_id;
     private int user_id;
-    private LocalDate booking_date;
+    private String booking_date;
     private boolean booking_status;
     private int item_id;
     private int days;
     private String comment;
 
-    public Booking(int days ,LocalDate booking_date) {
+    public Booking(int days ,String booking_date) {
         this.booking_date = booking_date;
         this.booking_id = booking_id;
         this.days = days;
@@ -35,13 +35,12 @@ public class Booking
         this.user_id = user_id;
     }
 
-    public LocalDate getBooking_date() {
+    public String getBooking_date() {
         return booking_date;
     }
 
-    public String setBooking_date(LocalDate booking_date) {
+    public void setBooking_date(String booking_date) {
         this.booking_date = booking_date;
-        return null;
     }
 
     public boolean isBooking_status() {

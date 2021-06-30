@@ -20,8 +20,8 @@ public class AddNewBookingCommand extends CommandProtectedPage {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException
     {
         int days = Integer.parseInt(request.getParameter("days"));
-        String booking_date = (request.getParameter("booking_date"));
-        Booking booking = addNewBookingFacade.addNewBooking(days, LocalDate.now());
+        LocalDate booking_date = LocalDate.now();
+        Booking booking = addNewBookingFacade.addNewBooking(days, String.valueOf(booking_date));
         request.setAttribute("booking", booking);
         return pageToShow;
     }

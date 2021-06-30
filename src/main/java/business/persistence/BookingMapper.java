@@ -21,7 +21,7 @@ public class BookingMapper {
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
                 ps.setInt(1, booking.getDays());
-                ps.setString(2, booking.setBooking_date(LocalDate.now()));
+                ps.setString(2, booking.getBooking_date());
                 ps.executeUpdate();
                 ResultSet ids = ps.getGeneratedKeys();
                 ids.next();

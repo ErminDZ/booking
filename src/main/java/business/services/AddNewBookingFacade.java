@@ -14,7 +14,7 @@ public class AddNewBookingFacade
 
     public AddNewBookingFacade(Database database){this.bookingMapper = new BookingMapper(database);}
 
-    public Booking addNewBooking(int days, LocalDate booking_date) throws UserException
+    public Booking addNewBooking(int days, String booking_date) throws UserException
     {
         Booking booking = new Booking(days, booking_date);
         booking = bookingMapper.addNewBooking(booking);
