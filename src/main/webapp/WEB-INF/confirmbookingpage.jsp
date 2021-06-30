@@ -13,11 +13,11 @@
 
         <h5>dage:</h5>
         <p>
-                ${requestScope.bookings.days}
+                ${requestScope.booking.days}
         </p>
         <h5>dato:</h5>
         <p>
-                ${requestScope.bookings.booking_date}
+            ${requestScope.booking.booking_date}
         </p>
 
     </jsp:body>
