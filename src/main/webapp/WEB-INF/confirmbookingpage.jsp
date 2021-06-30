@@ -19,6 +19,10 @@
         <p>
             ${requestScope.booking.booking_date}
         </p>
+        <h5>status:</h5>
+        <p>
+                ${requestScope.booking.booking_status = "Reseveret"}
+        </p>
 
     </jsp:body>
 

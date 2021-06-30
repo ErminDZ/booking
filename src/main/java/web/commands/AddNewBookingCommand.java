@@ -21,7 +21,8 @@ public class AddNewBookingCommand extends CommandProtectedPage {
     {
         int days = Integer.parseInt(request.getParameter("days"));
         LocalDate booking_date = LocalDate.now();
-        Booking booking = addNewBookingFacade.addNewBooking(days, String.valueOf(booking_date));
+        boolean booking_status = false;
+        Booking booking = addNewBookingFacade.addNewBooking(days, String.valueOf(booking_date),booking_status);
         request.setAttribute("booking", booking);
         return pageToShow;
     }

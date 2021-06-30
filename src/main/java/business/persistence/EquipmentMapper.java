@@ -21,7 +21,7 @@ public class EquipmentMapper
 
         try (Connection connection = database.connect())
         {
-            String sql = "SELECT * FROM items"; // TODO: WHERE status='ledigt'
+            String sql = "SELECT * FROM items";
 
             try (PreparedStatement ps = connection.prepareStatement(sql))
             {
