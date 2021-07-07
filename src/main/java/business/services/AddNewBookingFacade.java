@@ -14,10 +14,11 @@ public class AddNewBookingFacade
 
     public AddNewBookingFacade(Database database){this.bookingMapper = new BookingMapper(database);}
 
-    public Booking addNewBooking(int days, String booking_date, boolean booking_status) throws UserException
+    public Booking addNewBooking(int user_id, String booking_date, boolean booking_status, int item_id, int days, String comment) throws UserException
     {
-        Booking booking = new Booking(days, booking_date, booking_status);
+        Booking booking = new Booking(user_id, booking_date, booking_status, item_id, days, comment);
         booking = bookingMapper.addNewBooking(booking);
         return booking;
     }
+
 }

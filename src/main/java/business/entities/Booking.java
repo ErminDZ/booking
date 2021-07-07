@@ -12,14 +12,15 @@ public class Booking
     private int days;
     private String comment;
 
-    public Booking(int days, String booking_date, boolean booking_status) {
-        this.booking_date = booking_date;
-        this.booking_id = booking_id;
-        this.days = days;
-        this.booking_status = booking_status;
+    public Booking(int user_id, String booking_date, boolean booking_status, int item_id, int days, String comment) {
         this.user_id = user_id;
+        this.booking_date = booking_date;
+        this.booking_status = booking_status;
         this.item_id = item_id;
+        this.days = days;
+        this.comment = comment;
     }
+
 
     public int getBooking_id() {
         return booking_id;

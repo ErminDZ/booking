@@ -4,7 +4,6 @@ import business.entities.Booking;
 import business.exceptions.UserException;
 
 import java.sql.*;
-import java.time.LocalDate;
 
 public class BookingMapper {
     Database database;
@@ -13,13 +12,16 @@ public class BookingMapper {
 
     public Booking addNewBooking(Booking booking) throws UserException {
         try (Connection connection = database.connect()) {
-            String sql = "INSERT INTO booking SET days = ?, booking_date = ?, booking_status = ?";
+            String sql = "INSERT INTO booking SET days = ?, booking_date = ?, booking_status = ?, fk_user_id =?, fk_item_id = ?";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
                 ps.setInt(1, booking.getDays());
                 ps.setString(2, booking.getBooking_date());
                 ps.setBoolean(3, booking.isBooking_status());
+                ps.setInt(4, booking.getUser_id());
+                ps.setInt(5, booking.getItem_id());
+
 
                 ps.executeUpdate();
                 ResultSet booking_id = ps.getGeneratedKeys();
@@ -32,4 +34,5 @@ public class BookingMapper {
         }
         return booking;
     }
+
 }
