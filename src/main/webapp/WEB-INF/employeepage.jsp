@@ -27,5 +27,10 @@
             <a href="${pageContext.request.contextPath}/fc/showequipments" type="button" class="btn btn-primary btn-lg ms-5">se alle udstyr</a>
         </div>
 
+        <div class="d-flex justify-content-center mt-5">
+            <br>
+            <a href="${pageContext.request.contextPath}/fc/bookeditemslist" type="button" class="btn btn-primary btn-lg ms-5">se alle booked udstyr</a>
+        </div>
+
     </jsp:body>
 </t:genericpage>

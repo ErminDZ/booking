@@ -10,26 +10,23 @@
     </jsp:attribute>
     <jsp:body>
         <h1>Hello ${sessionScope.email} </h1>
-        Her er en liste med alt udstyr
+        You are now logged in as a Admin of our wonderful site.
 
         <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">udstyr id</th>
-            <th scope="col">Navn</th>
-            <th scope="col">Beskrivelse</th>
-            <th scope="col">Rum nummer</th>
-            <th scope="col">Type</th>
+            <th scope="col">Antal dage</th>
+            <th scope="col">Dato</th>
+            <th scope="col">Status</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="item" items="${requestScope.equipmentlist}">
+
+        <c:forEach var="booking" items="${requestScope.bookinglist}">
             <tr>
-                <td>${item.itemid}</td>
-                <td>${item.itemname}</td>
-                <td>${item.description}</td>
-                <td>${item.roomnumber}</td>
-                <td>${item.type}</td>
+                <td>${booking.days}</td>
+                <td>${booking.booking_date}</td>
+                <td>${booking.booking_status}</td>
             </tr>
 
         </c:forEach>

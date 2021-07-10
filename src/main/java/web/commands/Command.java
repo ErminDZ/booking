@@ -34,6 +34,7 @@ public abstract class Command
         commands.put("showstudents", new ShowStudentsCommand("showstudentpage", "admin"));
         commands.put("addnewstudentpage", new AddNewStudentCommand("addnewstudentpage", "admin"));
         commands.put("showequipments", new ShowEquipmentsCommand("showequipmentpage", "admin"));
+        commands.put("bookeditemslist", new ShowBookedItemsCommand("bookeditemslist", "admin"));
     }
 
     public static Command fromPath(

@@ -22,6 +22,14 @@ public class Booking
     }
 
 
+    public Booking(int days, String booking_date, boolean booking_status, int booking_id) {
+        this.days = days;
+        this.booking_date = booking_date;
+        this.booking_status = booking_status;
+        this.booking_id = booking_id;
+    }
+
+
     public int getBooking_id() {
         return booking_id;
     }
