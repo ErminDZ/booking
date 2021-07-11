@@ -36,6 +36,7 @@ public class AddNewBookingCommand extends CommandProtectedPage {
         int userId = user.getId();
         int itemId = Integer.parseInt(request.getParameter("item"));
         int days = 0;
+        boolean booking_status = false;
 
         try {
             days = Integer.parseInt(request.getParameter("days" + itemId));
@@ -43,8 +44,8 @@ public class AddNewBookingCommand extends CommandProtectedPage {
         catch (NumberFormatException e){
             throw new UserException("Husk at indtaste et antal dage!!!");
         }
-        LocalDate booking_date = LocalDate.now();
-        boolean booking_status = false;
+        LocalDate booking_date = LocalDate.now(); // .plusDays(days);
+
 
         String comment = request.getParameter("comment");
         Booking booking = addNewBookingFacade.addNewBooking(userId, String.valueOf(booking_date), booking_status, itemId, days, comment);
