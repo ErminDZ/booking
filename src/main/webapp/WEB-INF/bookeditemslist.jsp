@@ -11,7 +11,7 @@
     <jsp:body>
         <h1>Hello ${sessionScope.email} </h1>
         You are now logged in as a Admin of our wonderful site.
-
+        <form action="${pageContext.request.contextPath}/fc/bookeditemslist" method="post">
         <table class="table table-striped">
         <thead>
         <tr>
@@ -27,8 +27,8 @@
                 <td>${booking.days}</td>
                 <td>${booking.booking_date}</td>
                 <td>${booking.booking_status}</td>
+                <td><button type="submit" class="mt-3 btn btn-success align-items-center" name="booking" value="${booking.booking_status}">Change status</button></td>
             </tr>
-
         </c:forEach>
 
     </jsp:body>

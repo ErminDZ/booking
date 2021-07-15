@@ -18,6 +18,7 @@ public class ShowBookedItemsCommand extends CommandProtectedPage
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         request.setAttribute("bookinglist", bookingFacade.getAllBookings());
+        bookingFacade.updateBookings();
         return pageToShow;
     }
 }

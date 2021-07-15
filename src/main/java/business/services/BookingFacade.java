@@ -18,4 +18,8 @@ public class BookingFacade
     {
         return bookingMapper.getAllBookings();
     }
+    public  void updateBookings() throws UserException
+    {
+         bookingMapper.updateBookings();
+    }
 }
