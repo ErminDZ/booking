@@ -24,8 +24,7 @@ public class PointsMapper {
         try (Connection connection = database.connect())
         {
 
-            String sql = "select points from user\n" +
-                    "where user_id = ?;";
+            String sql = "select points from user where user_id = ?;";
 
             try (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS))
             {
