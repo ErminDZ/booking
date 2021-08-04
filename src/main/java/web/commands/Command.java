@@ -29,6 +29,7 @@ public abstract class Command
         commands.put("studentpage", new CommandProtectedPage("customerpage", "student"));
         commands.put("bookingpage", new ShowEquipmentsCommand("bookingpage", "student"));
         commands.put("confirmbookingpage", new AddNewBookingCommand ("confirmbookingpage", "student"));
+        commands.put("showpoints", new ShowPointsCommand ("showpoints", "student"));
 
         commands.put("adminpage", new CommandProtectedPage("employeepage", "admin"));
         commands.put("showstudents", new ShowStudentsCommand("showstudentpage", "admin"));
@@ -59,5 +60,4 @@ public abstract class Command
             throws UserException;
 
 }
-
 
