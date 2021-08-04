@@ -5,13 +5,15 @@ import business.persistence.Database;
 import business.persistence.UserMapper;
 import business.exceptions.UserException;
 
+import java.util.List;
+
 public class UserFacade
 {
-    UserMapper userMapper;
+    private UserMapper userMapper;
 
     public UserFacade(Database database)
     {
-        userMapper = new UserMapper(database);
+        this.userMapper = new UserMapper(database);
     }
 
     public User login(String email, String password) throws UserException
