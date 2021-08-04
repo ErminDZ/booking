@@ -12,12 +12,12 @@
     <jsp:body>
         <div class="d-flex justify-content-center mt-5">
             <br>
-            <a href="${pageContext.request.contextPath}/fc/bookingpage" type="button" class="btn btn-primary btn-lg ms-5">Vis alle studerende</a>
+            <a href="${pageContext.request.contextPath}/fc/bookingpage" type="button" class="btn btn-primary btn-lg ms-5">Book udstyr</a>
         </div>
 
         <div class="d-flex justify-content-center mt-5">
             <br>
-            <a href="${pageContext.request.contextPath}/fc/showpoints" type="button" class="btn btn-primary btn-lg ms-5">Vis mine points</a>
+            <a href="${pageContext.request.contextPath}/fc/showpoints" type="button" class="btn btn-primary btn-lg ms-5">Se point</a>
         </div>
     </jsp:body>
 
